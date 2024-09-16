@@ -1,6 +1,6 @@
 # Status
 
-[![R-CMD-check](https://github.com/nextpagesoft/hivModelling/workflows/R-CMD-check/badge.svg)](https://github.com/nextpagesoft/hivModelling/actions)
+[![R-CMD-check](../../actions/workflows/R-CMD-check.yaml/badge.svg)](../../actions/workflows/R-CMD-check.yaml)
 
 # Amsterdam UMC
 
@@ -17,5 +17,5 @@ diagnosis;
 
 # License
 
-See the [LICENSE](https://github.com/nextpagesoft/hivModelling/blob/master/LICENSE) file for
+See the [LICENSE](LICENSE) file for
 license rights and limitations (EUPL-1.2).
