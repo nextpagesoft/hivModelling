@@ -131,5 +131,16 @@ GetAllowedYearRanges <- function(
     incidenceFinalMinMaxYears[['HIVAIDS']] <- incidencePreMinMaxYears[['HIVAIDS']]
   }
 
+  # Get final range of calculations
+  allSearchNamesSet <- grepl('^(HIV|AIDS)', names(incidenceFinalMinMaxYears))
+  allMinYear <- 1980
+  if (any(allSearchNamesSet)) {
+    allMaxYear <- max(sapply(incidenceFinalMinMaxYears[allSearchNamesSet], '[[', 2))
+  } else {
+    allMaxYear <- allMinYear - 1
+  }
+
+  incidenceFinalMinMaxYears[['All']] <- c(allMinYear, allMaxYear)
+
   return(incidenceFinalMinMaxYears)
 }
