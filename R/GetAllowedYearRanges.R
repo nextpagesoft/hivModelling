@@ -63,7 +63,7 @@ GetAllowedYearRanges <- function(
     # Adjust years if needed
     if (
       (startYear <= allowedEndYear && allowedStartYear <= endYear) &&
-      !(allowedStartYear > allowedEndYear)
+        !(allowedStartYear > allowedEndYear)
     ) {
       startYear <- max(startYear, allowedStartYear)
       endYear <- min(endYear, allowedEndYear)
@@ -80,7 +80,7 @@ GetAllowedYearRanges <- function(
     endYear <- incidencePreMinMaxYears[['HIV']][[2]]
     if (
       (startYear <= allowedEndYear && allowedStartYear <= endYear) &&
-      !(allowedStartYear > allowedEndYear)
+        !(allowedStartYear > allowedEndYear)
     ) {
       startYear <- max(startYear, allowedStartYear)
       endYear <- min(endYear, allowedEndYear)
@@ -102,8 +102,8 @@ GetAllowedYearRanges <- function(
     endYear <- incidencePreMinMaxYears[['HIV']][[2]]
     if (
       !is.null(startYear) && !is.null(endYear) &&
-      (startYear <= allowedEndYear && allowedStartYear <= endYear) &&
-      !(allowedStartYear > allowedEndYear)
+        (startYear <= allowedEndYear && allowedStartYear <= endYear) &&
+        !(allowedStartYear > allowedEndYear)
     ) {
       startYear <- max(startYear, allowedStartYear)
       endYear <- min(endYear, allowedEndYear)
