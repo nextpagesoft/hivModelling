@@ -81,7 +81,7 @@ PerformMainFit <- function(
     attempt <- attempt + 1
 
     # AutoThetaFix ---------------------------------------------------------------------------------
-    if (!info$FullData && info$SplineType == 'B-SPLINE') {
+    if (!info$FullData && info$SplineType == 'B-SPLINE' & runType != 'MAIN_WITH_INIT') {
       PrintAlert('Searching for optimal number of fixed theta parameters started.')
 
       # Set initial number of splines with theta = 0 when doing automated search;
@@ -144,9 +144,8 @@ PerformMainFit <- function(
       param$NoThetaFix <- nThetaFixBest
       param <- UpdateThetaParams(info, param)
 
-      PrintAlert(
-        'Searching for optimal number of fixed theta parameters finished: {.val {param$NoThetaFix}}'
-      )
+      cat('\n')
+      PrintAlert('Searching for optimal number of fixed theta parameters finished: {.val {param$NoThetaFix}}')
     }
 
     nTheta <- 100L
